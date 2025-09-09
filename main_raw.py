@@ -22,9 +22,9 @@ from pysense import Pysense
 pycom.heartbeat(False)
 
 # LoRaWAN Credentials (replace with your actual values)
-DEV_EUI = ubinascii.unhexlify('70b3d5499a4ab666')
+DEV_EUI = ubinascii.unhexlify('0000000000000000')
 APP_EUI = ubinascii.unhexlify('0000000000000000')
-APP_KEY = ubinascii.unhexlify('7E6B97DE29039375C9BDC46D8D012847')
+APP_KEY = ubinascii.unhexlify('00000000000000000000000000000000')
 
 # LoRaWAN Region
 LORA_REGION = LoRa.EU868
