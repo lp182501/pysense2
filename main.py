@@ -39,7 +39,7 @@ APP_KEY = ubinascii.unhexlify('00000000000000000000000000000000') # Your Applica
 LORA_REGION = LoRa.EU868
 
 # Deep sleep duration in milliseconds (3 hours)
-DEEP_SLEEP_DURATION_MS = 3 * 60 * 60 * 1000
+DEEP_SLEEP_DURATION_S = 3 * 60 * 60
 
 # --- Sensor and LoRa Initialization ---
 try:
@@ -102,5 +102,5 @@ except Exception as e:
 finally:
     # --- Deep Sleep ---
     print("Entering deep sleep for 3 hours...")
-    py.setup_sleep(DEEP_SLEEP_DURATION_MS)
+    py.setup_sleep(DEEP_SLEEP_DURATION_S)
     py.go_to_sleep()

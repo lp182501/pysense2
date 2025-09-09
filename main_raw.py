@@ -30,7 +30,7 @@ APP_KEY = ubinascii.unhexlify('00000000000000000000000000000000')
 LORA_REGION = LoRa.EU868
 
 # Deep sleep duration (3 hours in milliseconds)
-DEEP_SLEEP_DURATION_MS = 10800000
+DEEP_SLEEP_DURATION_S = 3 * 60 * 60
 
 # I2C Sensor Addresses
 SI7006A20_ADDR = 0x40
@@ -87,5 +87,5 @@ try:
 
 finally:
     # --- Deep Sleep ---
-    py.setup_sleep(DEEP_SLEEP_DURATION_MS)
+    py.setup_sleep(DEEP_SLEEP_DURATION_S)
     py.go_to_sleep()
